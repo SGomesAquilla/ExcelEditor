@@ -1,0 +1,32 @@
+{
+  "name": "lcr_excel",
+  "productName": "LCR-Excel-App",
+  "version": "1.0.0",
+  "description": "desktop application for automatic excel form filling",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SGomesAquilla/ExcelEditor.git"
+  },
+  "keywords": [
+    "javascript",
+    "desktop",
+    "app",
+    "excel"
+  ],
+  "author": "Aquilla Gomes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SGomesAquilla/ExcelEditor/issues"
+  },
+  "homepage": "https://github.com/SGomesAquilla/ExcelEditor#readme",
+  "dependencies": {
+    "electron": "^32.1.2",
+    "exceljs": "^4.4.0",
+    "fs": "^0.0.1-security",
+    "toastify-js": "^1.12.0"
+  }
+}
