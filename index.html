@@ -7,35 +7,71 @@
     <title>LCRAPP</title>
 </head>
 <body>
-    <div class="container">
+    <div class="major-container">
         <section>
             <h2>Kr da fonte determinado pelo metodo das 7 distancias com o sistema LCR</h2>
-            <input> Eletrometro
-            <input> Kr
-            <input> Camara
-            <input> Data Kr
-            <input class="display-only"> Temp Decaim.
+            <div class="input-container">
+                <div class="input-group">
+                    <label for="eletrometro">Eletrômetro:</label>
+                    <input type="text" id="eletrometro">
+                </div>
+                <div class="input-group">
+                    <label for="camara">Câmara:</label>
+                    <input type="text" id="camara">
+                </div>
+                <div class="input-group">
+                    <label for="KR(LCR)">KR (LCR):</label>
+                    <input type="text" id="KR(LCR)">
+                </div>
+                <div class="input-group">
+                    <label for="DataKR">Data KR:</label>
+                    <input type="text" id="DataKR">
+                </div>
+            </div>
         </section>
         <section>
             <h2>Caracteristicas da camara poco e dados da calibracao anterior</h2>
-            <ul>
-                <li><input> Proprietario</li>
-                <li><input> Fabricante</li>
-                <li><input> Modelo</li>
-                <li><input> Serie</li>
-                <li><input> Inserto</li>
-                <input> Nk(Fab)
-                <input> Temo ref cert(C)
-                <input> K(corrigido Temp @ 20C)
-                <input> Laboratorio de calibracao
-                <input> Data de Calibracao
-                <input class="display-only">
-            </ul>
+            <div class="input-container">
+                <div class="input-group">
+                    <label for="proprietario">Proprietário:</label>
+                    <input type="text" id="proprietario">
+                </div>
+                <div class="input-group">
+                    <label for="fabricante">Fabricante:</label>
+                    <input type="text" id="fabricante">
+                </div>
+                <div class="input-group">
+                    <label for="modelo">Modelo:</label>
+                    <input type="text" id="modelo">
+                </div>
+                <div class="input-group">
+                    <label for="serie">Série:</label>
+                    <input type="text" id="serie">
+                </div>
+                <div class="input-group">
+                    <label for="inserto">Inserto:</label>
+                    <input type="text" id="inserto">
+                </div>
+                <div class="input-group">
+                    <label for="NK(Fab)">NK(Fab):</label>
+                    <input type="text" id="NK(Fab)">
+                </div>
+                <div class="input-group">
+                    <label for="TempRefCert">Temp ref cert(°C):</label>
+                    <input type="text" id="TempRefCert">
+                </div>
+                <div class="input-group">
+                    <label for="NKCorrigido">NK(Corrigido Temp @ 20°C):</label>
+                    <input type="text" id="NKCorrigido">
+                </div>
+            </div>
         </section>
+        <button onclick="run.exportToSheetValues()">Submit</button>
+        <div id="test"></div>
     </div>
 </body>
 <footer>
 
 </footer>
-<script> src='C:/Users/aquil/Desktop/Dev Study/LCR_Excel/frontend/script.js' </script>
+<script src='frontend/renderer.js'></script>
 </html>
