@@ -41,7 +41,18 @@ ipcMain.on('shareData', async (event, inputData) => {
     try {
         await accessExcel.xlsx.readFile(path.join(__dirname, 'LABMETRO-DQ.xlsx'));
         let worksheet = accessExcel.getWorksheet('sheet');
-        worksheet.getCell('C12').value = 'MAFE EU TE AMO';
+        worksheet.getCell('C12').value = inputData.eletrometro;
+        worksheet.getCell('C13').value = inputData.camara;
+        worksheet.getCell('I12').value = inputData.krLCR;
+        worksheet.getCell('I13').value = inputData.datar;
+        worksheet.getCell('B19').value = inputData.proprietario;
+        worksheet.getCell('B22').value = inputData.fabricante;
+        worksheet.getCell('D22').value = inputData.modelo;
+        worksheet.getCell('F22').value = inputData.serie;
+        worksheet.getCell('G22').value = inputData.inserto;
+        worksheet.getCell('H22').value = inputData.nkFab;
+        worksheet.getCell('I22').value = inputData.tempRefCert;
+        worksheet.getCell('J22').value = inputData.nkCorrigido;
         await accessExcel.xlsx.writeFile(path.join(__dirname, 'LABMETRO-DQ.xlsx'));
     } catch (error) {
         console.error('ERROR!', error);
