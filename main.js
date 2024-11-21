@@ -35,9 +35,18 @@ ipcMain.on('show-warning', () => {
     createWarningWindow();
 });
 
-ipcMain.on('shareData', (event, inputData) => {
+ipcMain.on('shareData', async (event, inputData) => {
     console.log(inputData);
-})
+    let accessExcel = new exceljs.Workbook();
+    try {
+        await accessExcel.xlsx.readFile(path.join(__dirname, 'LABMETRO-DQ.xlsx'));
+        let worksheet = accessExcel.getWorksheet('sheet');
+        worksheet.getCell('C12').value = 'MAFE EU TE AMO';
+        await accessExcel.xlsx.writeFile(path.join(__dirname, 'LABMETRO-DQ.xlsx'));
+    } catch (error) {
+        console.error('ERROR!', error);
+    }
+});
 
 app.whenReady().then(() => {
     createWindow();
